@@ -1,0 +1,81 @@
+/*Importaciones*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*variables*/
+:root {
+    --color-azul:#00a7a7;
+    --color-amarillo:#f7a000;
+    --color-blanco:whitesmoke;
+    --color-negro:black;
+    --color-verde: #5c9419;
+}
+
+/*reseteo*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Inter, serif;
+}
+
+/*header*/
+body{
+    background-color: var(--color-azul);
+}
+
+.header{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    gap: 5rem;
+    background-color: var(--color-verde);
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    font: bold 14px 'Inter', serif;
+    gap: 5rem;
+}
+
+.menu__opcion{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+    gap: 1rem;
+    font-size:2rem;
+    color: var(--color-amarillo);
+
+}
+
+.header__logo{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+}
+
+
+/*------Main------------*/
+.buscador__imagen{
+    width: 80rem;
+    height: 25rem;
+    border-radius: 1rem;
+
+}
+
+
+
+
+
