@@ -18,3 +18,16 @@ La aplicación sirve como una enciclopedia centralizada donde los usuarios puede
 -   **Consultar un catálogo** de juegos clásicos importado desde un formato XML.
 
 -   **Exportar datos** del catálogo a formato CSV para su uso en hojas de cálculo.
+-----------
+
+## Tecnologías y herramientas
+
+-   **HTML5 y CSS3:** Estructura y diseño responsivo.
+
+-   **JavaScript (ES6+):** Lógica de la aplicación con módulos asíncronos (`async/await`).
+
+-   **Zelda API:** Fuente de datos externa para la enciclopedia.
+
+-   **Firebase Firestore:** Almacenamiento en la nube para favoritos.
+
+-   **localStorage:** Sistema de caché local para optimizar el rendimiento.
