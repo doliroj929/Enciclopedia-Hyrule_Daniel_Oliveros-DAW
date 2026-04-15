@@ -63,8 +63,9 @@ body{
 
 .header__logo{
     width: 8rem;
-    height: 5rem;
+    height: 7rem;
     border-radius: 1rem;
+    object-fit: contain;
 }
 
 
@@ -78,14 +79,12 @@ body{
     text-align: center;
     padding: 2rem;
     gap: 2rem;
-
 }
 
 .buscador__imagen{
-    width: 80rem;
-    height: 25rem;
+    height: 28rem;
+    width: 100rem;
     border-radius: 1rem;
-    object-fit:fill;
 }
 
 
@@ -94,10 +93,25 @@ body{
     width:60rem;
     color: var(--color-verde);
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*--------footer-------*/
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--color-azul);
+    justify-content: center;
+    height: 7rem;
 }
 
 
-
-
+.footer__texto{
+    text-align: center;
+    color: var(--color-amarillo);
+}
 
 
