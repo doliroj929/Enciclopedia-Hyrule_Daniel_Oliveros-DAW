@@ -29,8 +29,11 @@
 
 /*header*/
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     background-image: linear-gradient(var(--color-verde), var(--color-azul));
-    background-attachment: fixed;
     font-family: var(--fuente-zelda), serif;
 }
 
@@ -74,7 +77,7 @@ body{
     border-radius: 1rem;
     object-fit: contain;
 }
-/*------Main------------*/
+/*------Buscador-----------*/
 
 .buscador__titulo{
     text-shadow: 2px 2px 4px var(--color-amarillo);
@@ -119,7 +122,6 @@ body{
     font-family: var(--fuente-zelda), serif;
 }
 
-
 .buscador__resultado {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -128,7 +130,6 @@ body{
     width: 100%;
 }
 
-/* La tarjeta (article) */
 .tarjeta {
     background-color: var(--color-blanco);
     border: 3px solid var(--color-amarillo);
@@ -141,6 +142,45 @@ body{
     color: var(--color-negro);
 }
 
+/*-----favoritos-------*/
+.favoritos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenedor-favoritos{
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para que no se estire infinito */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.buscador__resultado {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para que no se estire infinito */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/*------juegos------*/
+.juegos__contenedor {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
 
 
 

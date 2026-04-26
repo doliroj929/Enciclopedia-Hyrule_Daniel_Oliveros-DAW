@@ -13,38 +13,31 @@
     <a href="index.html"> <img class="header__logo" src="./asssert/logo.PNG" alt="logo_trifuerza" ></a>
     <nav class="header__menu">
         <ul class="menu">
-            <li><a class="menu__opcion" href="index.html">inicio </a></li>
-            <li><a class="menu__opcion" href="juegos.html">juegos</a></li>
+            <li><a class="menu__opcion" href="index.html">inicio</a></li>
             <li><a class="menu__opcion" href="favoritos.html" >favoritos</a></li>
+            <li><a class="menu__opcion" href="juegos.html">juegos</a></li>
         </ul>
     </nav>
 </header>
-<main class="contenedor-principal">
-    <section class="seccion-controles">
-        <h1 class="titulo-catalogo">Catálogo de la Saga</h1>
-        <button id="btn-descargar-csv" class="boton-accion">
-            Exportar a CSV
-        </button>
+<main class="juegos">
+
+    <section class="juegos__contenedor">
+        <h1 class="buscador__titulo">Juegos xml</h1>
+        <p id="estadoXml" class="mensaje">Carga el archivo para ver el catálogo .</p>
+        <button id="btnCargarXml" class="boton-accion">Oprime para ver los juegos - Cargar Catálogo XML</button>
+        <button id="btnExportarCsv" class="boton-accion">Exportar a CSV</button>
+    <section id="contenedorTabla" class="tabla-contenedor">
     </section>
 
-    <section class="seccion-tabla">
-        <table id="tabla-juegos" class="tabla-datos">
-            <caption class="oculto-visual">Lista de juegos de The Legend of Zelda</caption>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Plataforma</th>
-                <th>Año</th>
-                <th>Puntuación</th>
-            </tr>
-            </thead>
-            <tbody id="cuerpo-tabla">
-            </tbody>
-        </table>
+    <pre id="jsonVista" class="codigo-json"></pre>
+
     </section>
+
 </main>
-<footer>
+
+<script type="module" src="js/main-juegos.js" defer></script>
+<footer class="footer">
+    <p class="footer__texto">Proyecto - Enciclopedia-Hyrule_Daniel_Oliveros-DAW</p>
 </footer>
 </body>
 </html>

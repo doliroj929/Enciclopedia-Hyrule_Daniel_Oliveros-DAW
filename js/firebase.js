@@ -1,5 +1,14 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, query, orderBy } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    deleteDoc,
+    doc,
+    query,
+    orderBy
+} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -12,6 +21,7 @@ const firebaseConfig = {
 };
 
 
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const favRef = collection(db, "favoritos");
@@ -19,38 +29,51 @@ const favRef = collection(db, "favoritos");
 
 export async function agregarFavorito(entidad) {
     try {
-        await addDoc(favRef, {
+        const docRef = await addDoc(favRef, {
             ...entidad,
-            fechaAgregado: new Date().toLocaleString()
+            fechaAgregado: new Date().toISOString() // Importante para ordenar después
         });
+        return docRef.id;
     } catch (e) {
-        throw new Error("No se pudo guardar en Firebase: " + e.message);
+        throw new Error("Error al guardar en la nube: " + e.message);
     }
 }
+
 
 export async function obtenerFavoritos() {
     try {
+
         const q = query(favRef, orderBy("nombre", "asc"));
         const snapshot = await getDocs(q);
-        return snapshot.docs.map(d => ({ documentoId: d.id, ...d.data() }));
+
+        return snapshot.docs.map(documento => ({
+            documentoId: documento.id,
+            ...documento.data()
+        }));
     } catch (e) {
-        throw new Error("Error al leer de Firebase: " + e.message);
+        throw new Error("No se pudieron cargar los favoritos.");
     }
 }
 
 
-export async function eliminarFavorito(id) {
+export async function eliminarFavorito(documentoId) {
     try {
-        const documento = doc(db, "favoritos", id);
-        await deleteDoc(documento);
+        const docADestruir = doc(db, "favoritos", documentoId);
+        await deleteDoc(docADestruir);
     } catch (e) {
-        throw new Error("No se pudo eliminar de Firebase.");
+        throw new Error("No se pudo eliminar el favorito.");
     }
 }
-
 
 export async function vaciarFavoritos() {
-    const snapshot = await getDocs(favRef);
-    const promesas = snapshot.docs.map(d => deleteDoc(doc(db, "favoritos", d.id)));
-    await Promise.all(promesas);
+    try {
+        const snapshot = await getDocs(favRef);
+        // Borramos todos los documentos uno por uno
+        const promesas = snapshot.docs.map(documento =>
+            deleteDoc(doc(db, "favoritos", documento.id))
+        );
+        await Promise.all(promesas);
+    } catch (e) {
+        throw new Error("Error al vaciar la colección.");
+    }
 }

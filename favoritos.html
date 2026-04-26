@@ -13,15 +13,44 @@
     <a href="index.html"> <img class="header__logo" src="./asssert/logo.PNG" alt="logo_trifuerza" ></a>
     <nav class="header__menu">
         <ul class="menu">
-            <li><a class="menu__opcion" href="index.html">inicio </a></li>
+            <li><a class="menu__opcion" href="index.html">inicio</a></li>
             <li><a class="menu__opcion" href="favoritos.html" >favoritos</a></li>
             <li><a class="menu__opcion" href="juegos.html">juegos</a></li>
         </ul>
     </nav>
 </header>
-<main>
+<main class="favoritos">
+        <section class="contenedor-favoritos" >
+        <h1 class="buscador__titulo">Mis Tesoros Guardados</h1>
+            <output id="notificacionUsuario" class="notificacion--invisible"></output>
+        <p id="estadoFavoritos" class="mensaje"></p>
+
+        <label for="filtroTipoFavorito" class="filtro__buscadro">Filtrar por tipo</label>
+        <select id="filtroTipoFavorito" class="input__filtro">
+            <option value="todos">Todos los tipos</option>
+            <option value="characters">Personajes</option>
+            <option value="games">Juegos</option>
+        </select>
+
+        <label for="ordenFavoritos" class="filtro__buscadro">Ordenar por</label>
+        <select id="ordenFavoritos" class="input__filtro">
+            <option value="az">Nombre (A-Z)</option>
+            <option value="za">Nombre (Z-A)</option>
+            <option value="recientes">Más recientes</option>
+            <option value="antiguos">Más antiguos</option>
+        </select>
+        <button id="btnVaciarFavoritos" class="boton-peligro">
+            Vaciar toda la lista
+        </button>
+        </section>
+
+    <section id="listaFavoritos" class="buscador__resultado"></section>
 </main>
-<footer>
+<script type="module" src="js/main-favoritos.js" defer></script>
+
+<footer class="footer">
+    <p class="footer__texto">Proyecto - Enciclopedia-Hyrule_Daniel_Oliveros-DAW</p>
 </footer>
+
 </body>
 </html>

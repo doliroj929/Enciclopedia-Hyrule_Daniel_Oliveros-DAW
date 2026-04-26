@@ -1,4 +1,4 @@
-async function juegosCargarXml(){
+export async function juegosCargarXml(){
     /*fetch:buscar*/
     const praticaResouesta = await fetch("data/juegos.xml");
     /*await :esperar la respuesta  */
@@ -34,7 +34,7 @@ async function main(){
 
 
     const juegos= await juegosCargarXml();
-    console.log(juegos);
+
 
 }
 
