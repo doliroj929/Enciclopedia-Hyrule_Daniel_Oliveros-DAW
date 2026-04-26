@@ -91,9 +91,10 @@ body{
 }
 
 .buscador__imagen{
-    height: 23rem;
-    width: 92rem;
+    height: 20rem;
+    width: 60rem;
     border-radius: 1rem;
+
 }
 
 .input__buscador{
@@ -101,7 +102,6 @@ body{
     width:60rem;
     color: var(--color-verde);
     font-size: 1.5rem;
-    font-weight: bold;
     font-family: var(--fuente-zelda), serif;
 }
 
