@@ -1,5 +1,5 @@
 import { buscarEnZeldaApi, adaptarEntidad, debounce } from "./api.js";
-/* import { obtenerFavoritos, agregarFavorito, eliminarFavorito } from "./firebase.js"; */
+import { obtenerFavoritos, agregarFavorito, eliminarFavorito } from "./firebase.js";
 
 // Elementos específicos de index.html
 const filtro = document.getElementById("filtro");
@@ -9,9 +9,9 @@ const resultados = document.getElementById("resultados");
 
 let favoritos = [];
 
-/*window.addEventListener("load", async () => {
+window.addEventListener("load", async () => {
     favoritos = await obtenerFavoritos();
-});*/
+});
 
 buscador_principal.addEventListener("input", debounce(async () => {
     await realizarBusqueda();

@@ -72,6 +72,9 @@ function obtenerDetalle1(entidad, tipo) {
         return "Raza: " + (entidad.race || "No disponible");
     }
 
+    if (tipo === "items") {
+        return "Juegos relacionados: " + contarArray(entidad.games);
+    }
 
     if (tipo === "games") {
         return "Desarrollador: " + (entidad.developer || "No disponible");
@@ -85,6 +88,9 @@ function obtenerDetalle2(entidad, tipo) {
         return "Género: " + (entidad.gender || "No disponible");
     }
 
+    if (tipo === "items") {
+        return "ID: " + (entidad.id || "No disponible");
+    }
 
     if (tipo === "games") {
         return "Fecha de lanzamiento: " + (entidad.released_date || "No disponible");

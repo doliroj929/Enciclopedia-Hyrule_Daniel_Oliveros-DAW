@@ -120,6 +120,28 @@ body{
 }
 
 
+.buscador__resultado {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+/* La tarjeta (article) */
+.tarjeta {
+    background-color: var(--color-blanco);
+    border: 3px solid var(--color-amarillo);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-negro);
+}
+
+
 
 
 /*--------footer-------*/
