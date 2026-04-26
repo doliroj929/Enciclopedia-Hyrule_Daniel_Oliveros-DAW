@@ -13,7 +13,7 @@
     <a href="index.html"> <img class="header__logo" src="./asssert/logo.PNG" alt="logo_trifuerza" ></a>
     <nav class="header__menu">
         <ul class="menu">
-            <li><a class="menu__opcion" href="index.html">inicio </a></li>
+            <li><a class="menu__opcion" href="index.html">inicio</a></li>
             <li><a class="menu__opcion" href="favoritos.html" >favoritos</a></li>
             <li><a class="menu__opcion" href="juegos.html">juegos</a></li>
         </ul>
@@ -21,21 +21,28 @@
 </header>
 <main>
     <section class="buscador">
+
+        <select id="filtro" class="input__filtro">
+            <option  disabled selected value="monsters">Que quires buscar hoy</option>
+            <option value="games">juegos</option>
+            <option value="characters">Personajes</option>
+        </select>
+
+
         <label for="buscador_principal">
                 <img src="asssert/zelda_buscador.png" alt="buscador_principal" class="buscador__imagen">
         </label>
 
-        <select id="tipo_entidad" class="input__filtro">
-            <option value="monsters">Que quires buscar hoy</option>
-            <option value="monsters">Monstruos</option>
-            <option value="characters">Personajes</option>
-            <option value="items">Objetos</option>
-        </select>
+        <input class="input__buscador"  id="buscador_principal" type="text"placeholder=" Buscador principal">
 
-        <input class="input__buscador"  id="buscador_principal" type="text"placeholder=" Buscador principal" >
+        <article class="buscador__resultado"></article>
 
     </section>
 </main>
+
+
+<script src="js/api.js" defer ></script>
+
 <footer class="footer">
     <p class="footer__texto">Proyecto - Enciclopedia-Hyrule_Daniel_Oliveros-DAW</p>
 </footer>

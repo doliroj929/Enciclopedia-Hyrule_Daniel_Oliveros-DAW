@@ -1,10 +1,24 @@
 {
-  "name": "Enciclopedia-Hyrule_Daniel_Oliveros-DAW",
+  "name": "enciclopedia-hyrule_daniel_oliveros-daw",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este proyecto es una aplicación web pensada para que cualquier fan de _The Legend of Zelda_ pueda explorar el universo de Hyrule. No es solo un buscador; es una herramienta que combina datos de una API externa, almacenamiento en la nube y conversión de archivos antiguos xml a json",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doliroj929/Enciclopedia-Hyrule_Daniel_Oliveros-DAW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doliroj929/Enciclopedia-Hyrule_Daniel_Oliveros-DAW/issues"
+  },
+  "homepage": "https://github.com/doliroj929/Enciclopedia-Hyrule_Daniel_Oliveros-DAW#readme",
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  }
 }

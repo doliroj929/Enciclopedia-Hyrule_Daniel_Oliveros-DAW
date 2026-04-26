@@ -1,6 +1,13 @@
 /*Importaciones*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@font-face {
+    font-family: 'Hylia Serif';
+    src: url('../fonts/fuente-zelda.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*variables*/
 :root {
     --color-azul:#00a7a7;
@@ -8,6 +15,7 @@
     --color-blanco:whitesmoke;
     --color-negro:black;
     --color-verde: #5c9419;
+    --fuente-zelda: "Hylia Serif";
 }
 
 /*reseteo*/
@@ -17,13 +25,13 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    font-family: Inter, serif;
 }
 
 /*header*/
 body{
     background-image: linear-gradient(var(--color-verde), var(--color-azul));
     background-attachment: fixed;
+    font-family: var(--fuente-zelda), serif;
 }
 
 .header{
@@ -43,7 +51,7 @@ body{
     justify-content: space-between;
     text-align: center;
     width: 100%;
-    font: bold 14px 'Inter', serif;
+    font: var(--fuente-zelda);
     gap: 5rem;
 }
 
@@ -54,7 +62,6 @@ body{
     justify-content: space-between;
     text-align: center;
     width: 100%;
-    font-weight: bolder;
     gap: 1rem;
     font-size:2rem;
     color: var(--color-amarillo);
@@ -67,8 +74,6 @@ body{
     border-radius: 1rem;
     object-fit: contain;
 }
-
-
 /*------Main------------*/
 
 .buscador{
@@ -82,11 +87,10 @@ body{
 }
 
 .buscador__imagen{
-    height: 28rem;
-    width: 100rem;
+    height: 23rem;
+    width: 92rem;
     border-radius: 1rem;
 }
-
 
 .input__buscador{
     border-radius: 0.5rem;
@@ -94,7 +98,21 @@ body{
     color: var(--color-verde);
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: var(--fuente-zelda), serif;
 }
+
+
+.input__filtro{
+    border-radius: 0.5rem;
+    width:15rem;
+    height:2rem;
+    color: var(--color-azul);
+    font-size: 1rem;
+    font-family: var(--fuente-zelda), serif;
+}
+
+
+
 
 /*--------footer-------*/
 .footer{

@@ -14,12 +14,35 @@
     <nav class="header__menu">
         <ul class="menu">
             <li><a class="menu__opcion" href="index.html">inicio </a></li>
-            <li><a class="menu__opcion" href="favoritos.html" >favoritos</a></li>
             <li><a class="menu__opcion" href="juegos.html">juegos</a></li>
+            <li><a class="menu__opcion" href="favoritos.html" >favoritos</a></li>
         </ul>
     </nav>
 </header>
-<main>
+<main class="contenedor-principal">
+    <section class="seccion-controles">
+        <h1 class="titulo-catalogo">Catálogo de la Saga</h1>
+        <button id="btn-descargar-csv" class="boton-accion">
+            Exportar a CSV
+        </button>
+    </section>
+
+    <section class="seccion-tabla">
+        <table id="tabla-juegos" class="tabla-datos">
+            <caption class="oculto-visual">Lista de juegos de The Legend of Zelda</caption>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Plataforma</th>
+                <th>Año</th>
+                <th>Puntuación</th>
+            </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+            </tbody>
+        </table>
+    </section>
 </main>
 <footer>
 </footer>
