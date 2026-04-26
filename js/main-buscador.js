@@ -1,7 +1,7 @@
 import { buscarEnZeldaApi, adaptarEntidad, debounce } from "./api.js";
+/* import { obtenerFavoritos, agregarFavorito, eliminarFavorito } from "./firebase.js"; */
 
-
-
+// Elementos específicos de index.html
 const filtro = document.getElementById("filtro");
 const buscador_principal = document.getElementById("buscador_principal");
 const estadoBusqueda = document.getElementById("estadoBusqueda");
@@ -9,9 +9,9 @@ const resultados = document.getElementById("resultados");
 
 let favoritos = [];
 
-window.addEventListener("load", async () => {
+/*window.addEventListener("load", async () => {
     favoritos = await obtenerFavoritos();
-});
+});*/
 
 buscador_principal.addEventListener("input", debounce(async () => {
     await realizarBusqueda();
@@ -57,14 +57,15 @@ function mostrarResultados(entidades) {
         const favoritoExistente = favoritos.find(f => f.apiId === entidad.apiId);
         const textoBoton = favoritoExistente ? "Eliminar de favoritos" : "Agregar a favoritos";
 
-        tarjeta.innerHTML = `
+        tarjeta.innerHTML =`
             <span class="tipo">${entidad.tipo}</span>
             <h3>${entidad.nombre}</h3>
             <p>${entidad.descripcion}</p>
             <p>${entidad.detalle1}</p>
             <p>${entidad.detalle2}</p>
-            <button class="${favoritoExistente ? 'eliminar' : ''}">${textoBoton}</button>
-        `;
+            <button class="${favoritoExistente ? 'eliminar' : ''}">${textoBoton}</button> `;
+
+
 
         tarjeta.querySelector("button").addEventListener("click", async (e) => {
             if (favoritoExistente) {
