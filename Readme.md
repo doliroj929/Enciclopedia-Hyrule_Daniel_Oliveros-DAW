@@ -4,7 +4,7 @@
 ### Curso Daw 1 mañana 
 
 
-### ****Descripción del proyecto****:
+## ****Descripción del proyecto****:
 Este proyecto es una aplicación web pensada para que cualquier fan de _The Legend of Zelda_ pueda explorar el universo de Hyrule. No es solo un buscador; es una herramienta que combina datos de una API externa, almacenamiento en la nube y conversión de archivos antiguos xml a json
 
 funciones de la web
@@ -20,7 +20,7 @@ La aplicación sirve como una enciclopedia centralizada donde los usuarios puede
 -   **Exportar datos** del catálogo a formato CSV para su uso en hojas de cálculo.
 -----------
 
-### Tecnologías y herramientas
+## Tecnologías y herramientas
 
 -   **HTML5 y CSS3:** Estructura y diseño responsivo.
 
@@ -70,18 +70,13 @@ En clase hemos visto tres formatos y aquí los uso todos:
 3.  **CSV**: Es como una hoja de Excel pero en texto. Lo uso para la exportación, porque es el formato que cualquier programa de oficina puede abrir fácilmente.
 
 
-## 📑 Esquemas (Validación)
+##  Esquemas y Validación
 
-Para asegurar que los datos no tengan errores, usamos validadores:
+Para asegurar que los datos no contengan errores, he trabajado con:
 
--   **XSD (para XML)**: Comprueba que mi archivo `juegos.xml` tenga todos los campos obligatorios (id, título, año) y que el año sea un número y no un texto.
+-   **XSD (XML Schema Definition)**: Define qué etiquetas son obligatorias en mi `juegos.xml` (por ejemplo, que cada juego tenga un ID único y un año numérico).
 
--   **JSON Schema**: Lo uso para validar que lo que me llega de la API de Zelda tiene la estructura que mi código espera antes de intentar pintarlo.
-
-
-> _[Aquí deberías pegar una captura de pantalla de tu validador de XML/XSD funcionando]_
-
-##  Almacenamiento
+-   **JSON Schema**: Valida que la respuesta de la API de Zelda traiga los campos necesarios antes de intentar pintarlos en el HTML, evitando que la web "rompa" si falta una descripción. _(Evidencia: Los archivos se validan correctamente en el IDE y no presentan errores de estructura en la consola del navegador)._
 
 He tomado decisiones distintas según la necesidad:
 
