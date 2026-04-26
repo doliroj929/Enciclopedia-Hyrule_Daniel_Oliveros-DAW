@@ -76,6 +76,10 @@ body{
 }
 /*------Main------------*/
 
+.buscador__titulo{
+    text-shadow: 2px 2px 4px var(--color-amarillo);
+}
+
 .buscador{
     display: flex;
     flex-direction: column;
@@ -99,6 +103,10 @@ body{
     font-size: 1.5rem;
     font-weight: bold;
     font-family: var(--fuente-zelda), serif;
+}
+
+.filtro__buscadro{
+    font-size: 1.5rem;
 }
 
 

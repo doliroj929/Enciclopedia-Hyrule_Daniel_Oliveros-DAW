@@ -22,26 +22,32 @@
 <main>
     <section class="buscador">
 
+        <h1 class="buscador__titulo">El mejor buscador de sobre el mundo zelda </h1>
+
+        <label for="buscador_principal">
+                <img src="asssert/zelda_buscador.png" alt="buscador_principal" class="buscador__imagen">
+        </label>
+
+
+        <label for="filtro"  class="filtro__buscadro" >Elige una opcion</label>
         <select id="filtro" class="input__filtro">
             <option  disabled selected value="monsters">Que quires buscar hoy</option>
             <option value="games">juegos</option>
             <option value="characters">Personajes</option>
         </select>
 
-
-        <label for="buscador_principal">
-                <img src="asssert/zelda_buscador.png" alt="buscador_principal" class="buscador__imagen">
-        </label>
-
-        <input class="input__buscador"  id="buscador_principal" type="text"placeholder=" Buscador principal">
+        <input class="input__buscador" id="buscador_principal" type="text"placeholder=" Buscador principal">
 
         <article class="buscador__resultado"></article>
+
+
+
 
     </section>
 </main>
 
 
-<script src="js/api.js" defer ></script>
+<script src="js/transform.js" defer ></script>
 
 <footer class="footer">
     <p class="footer__texto">Proyecto - Enciclopedia-Hyrule_Daniel_Oliveros-DAW</p>
